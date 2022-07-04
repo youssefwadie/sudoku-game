@@ -7,4 +7,4 @@ JavaFX Sudoku Game with solver
 ## With the solver
 ![solved](/img/solved.png)
 
-**Notice that the correct values are colored green, the wrong answers or blank are colored red**
+**Notice that the correct values are colored green, the wrong and empty values are colored red**
