@@ -89,7 +89,7 @@ public class SudokuController implements Initializable {
         context.clearRect(0, 0, 450, 450);
         context.setStroke(Color.RED);
         context.setLineWidth(5);
-        // draw a strokeRoundRect using the same technique we used for drawing our board.
+        
         int boxMargin = 2;
         context.strokeRoundRect(playerSelectedCol * boxSize + boxMargin,
                 playerSelectedRow * boxSize + boxMargin,
@@ -120,7 +120,6 @@ public class SudokuController implements Initializable {
                 context.setFill(Color.BLACK);
                 context.setFont(new Font(20));
                 if (initial[row][col] != 0) {
-                    // draw the number using the fillText method
                     context.fillText(String.valueOf(initial[row][col]), positionX, positionY);
                 }
             }
@@ -128,7 +127,6 @@ public class SudokuController implements Initializable {
     }
 
     private void drawPlayerEnteredNumbers(GraphicsContext context) {
-        // draw the players numbers from our GameBoard instance
         int[][] player = gameboard.getPlayer();
         for (int row = 0; row < 9; row++) {
             for (int col = 0; col < 9; col++) {
@@ -176,7 +174,6 @@ public class SudokuController implements Initializable {
     }
 
     public void buttonFivePressed() {
-
         gameboard.modifyPlayer(5, playerSelectedRow, playerSelectedCol);
         drawOnCanvas(canvas.getGraphicsContext2D());
     }
